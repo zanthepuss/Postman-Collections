@@ -1,0 +1,3491 @@
+{
+	"info": {
+		"_postman_id": "f5de8509-00df-4136-b31d-c176399781fc",
+		"name": "Mimecast",
+		"description": "This colleection contains API calls from Tech Connect, Mimecast's public API and integrations site.\n\nFor a full list of available API endpoints, visit: https://mimecast.com/tech-connect/documentation\n\nLast updated 2020-01-20",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22836502"
+	},
+	"item": [
+		{
+			"name": "Account Information",
+			"item": [
+				{
+					"name": "Get Account",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/account/get-account",
+							"path": [
+								"api",
+								"account",
+								"get-account"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/account/get-account/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Support Info",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/account/get-support-info",
+							"path": [
+								"api",
+								"account",
+								"get-support-info"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/account/get-support-info/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/provisioning/get-packages",
+							"path": [
+								"api",
+								"provisioning",
+								"get-packages"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/account/get-products/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dashboard Notifications",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/account/get-dashboard-notifications",
+							"path": [
+								"api",
+								"account",
+								"get-dashboard-notifications"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/account/get-dashboard-notifications/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Web Security",
+			"item": [
+				{
+					"name": "Policy Management",
+					"item": [
+						{
+							"name": "Create Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"policies\": [\n                {\n                    \"description\": \"String\",\n                    \"from\": {\n                        \"attribute\": {\n                            \"name\": \"String\",\n                            \"value\": \"String\",\n                            \"id\": \"String\"\n                        },\n                        \"type\": \"String\",\n                        \"emailAddress\": \"String\",\n                        \"groupId\": \"String\",\n                        \"emailDomain\": \"String\"\n                    },\n                    \"to\": {\n                        \"attribute\": {\n                            \"name\": \"String\",\n                            \"value\": \"String\",\n                            \"id\": \"String\"\n                        },\n                        \"type\": \"String\",\n                        \"emailAddress\": \"String\",\n                        \"groupId\": \"String\",\n                        \"emailDomain\": \"String\"\n                    }\n                }\n            ],\n            \"urls\": [\n                {\n                    \"action\": \"String\",\n                    \"type\": \"String\",\n                    \"id\": \"String\",\n                    \"value\": \"String\"\n                }\n            ],\n            \"description\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/webwhiteurl/create-policy-with-targets",
+									"path": [
+										"api",
+										"policy",
+										"webwhiteurl",
+										"create-policy-with-targets"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/web-security/create-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Policies",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/webwhiteurl/get-policy-with-targets",
+									"path": [
+										"api",
+										"policy",
+										"webwhiteurl",
+										"get-policy-with-targets"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/web-security/get-policies/"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"policies\": [\n                {\n                    \"description\": \"String\",\n                    \"from\": {\n                        \"attribute\": {\n                            \"name\": \"String\",\n                            \"value\": \"String\",\n                            \"id\": \"String\"\n                        },\n                        \"type\": \"String\",\n                        \"emailAddress\": \"String\",\n                        \"groupId\": \"String\",\n                        \"emailDomain\": \"String\"\n                    },\n                    \"to\": {\n                        \"attribute\": {\n                            \"name\": \"String\",\n                            \"value\": \"String\",\n                            \"id\": \"String\"\n                        },\n                        \"type\": \"String\",\n                        \"emailAddress\": \"String\",\n                        \"groupId\": \"String\",\n                        \"emailDomain\": \"String\"\n                    }\n                }\n            ],\n            \"id\": \"String\",\n            \"urls\": [\n                {\n                    \"action\": \"String\",\n                    \"type\": \"String\",\n                    \"id\": \"String\",\n                    \"value\": \"String\"\n                }\n            ],\n            \"description\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/webwhiteurl/update-policy-with-targets",
+									"path": [
+										"api",
+										"policy",
+										"webwhiteurl",
+										"update-policy-with-targets"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/web-security/update-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/webwhiteurl/delete-policy-with-targets",
+									"path": [
+										"api",
+										"policy",
+										"webwhiteurl",
+										"delete-policy-with-targets"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/web-security/delete-policy/"
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Update User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"forcePasswordChange\": false,\n            \"allowSmtp\": false,\n            \"emailAddress\": \"String\",\n            \"passwordNeverExpires\": false,\n            \"allowPop\": false,\n            \"accountDisabled\": false,\n            \"password\": \"String\",\n            \"archiveStartDate\": \"Date String\",\n            \"accountLocked\": false,\n            \"name\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/update-user",
+							"path": [
+								"api",
+								"user",
+								"update-user"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/update-user/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Attributes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"attributes\": [\n                {\n                    \"id\": \"String\",\n                    \"value\": \"String\"\n                }\n            ],\n            \"emailAddress\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/update-attributes",
+							"path": [
+								"api",
+								"user",
+								"update-attributes"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/update-attributes/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Alias",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"aliasFor\": \"String\",\n            \"alias\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/update-alias",
+							"path": [
+								"api",
+								"user",
+								"update-alias"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/update-alias/"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Alias",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"aliasFor\": \"String\",\n            \"alias\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/remove-alias",
+							"path": [
+								"api",
+								"user",
+								"remove-alias"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/remove-alias/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"showAvatar\": false,\n            \"emailAddress\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/get-profile",
+							"path": [
+								"api",
+								"user",
+								"get-profile"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/get-profile/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Most Used Contacts",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/user/get-most-used-contacts",
+							"path": [
+								"api",
+								"user",
+								"get-most-used-contacts"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/get-most-used-contacts/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Internal Users",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"domain\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/get-internal-users",
+							"path": [
+								"api",
+								"user",
+								"get-internal-users"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/get-internal-users/"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Delegate User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/remove-delegate-user",
+							"path": [
+								"api",
+								"user",
+								"remove-delegate-user"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/remove-delegate-user/"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Delegate User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"delegateAddress\": \"String\",\n            \"primaryAddress\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/add-delegate-user",
+							"path": [
+								"api",
+								"user",
+								"add-delegate-user"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/add-delegate-user/"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Delegate Users",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"primaryAddress\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/find-delegate-users",
+							"path": [
+								"api",
+								"user",
+								"find-delegate-users"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/find-delegate-users/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Delegated Access",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/user/get-delegated-access",
+							"path": [
+								"api",
+								"user",
+								"get-delegated-access"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/get-delegated-access/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Attributes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"emailAddress\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/get-attributes",
+							"path": [
+								"api",
+								"user",
+								"get-attributes"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/get-attributes/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Aliases",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"emailAddress\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/get-aliases",
+							"path": [
+								"api",
+								"user",
+								"get-aliases"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/get-aliases/"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"password\": \"String\",\n            \"emailAddress\": \"String\",\n            \"name\": \"String\",\n            \"forcePasswordChange\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/user/create-user",
+							"path": [
+								"api",
+								"user",
+								"create-user"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/user/create-user/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Directory",
+			"item": [
+				{
+					"name": "Find Groups",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meta\": {},\n    \"data\": [\n        {\n            \"query\": \"String\",\n            \"source\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/directory/find-groups",
+							"path": [
+								"api",
+								"directory",
+								"find-groups"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/directory/find-groups/"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Group",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"description\": \"String\",\n            \"parentId\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/directory/create-group",
+							"path": [
+								"api",
+								"directory",
+								"create-group"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/directory/create-group/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Group",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\",\n            \"description\": \"String\",\n            \"parentId\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/directory/update-group",
+							"path": [
+								"api",
+								"directory",
+								"update-group"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/directory/update-group/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Group Members",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/directory/get-group-members",
+							"path": [
+								"api",
+								"directory",
+								"get-group-members"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/directory/get-group-members/"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Group Member",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"domain\": \"String\",\n            \"emailAddress\": \"String\",\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/directory/add-group-member",
+							"path": [
+								"api",
+								"directory",
+								"add-group-member"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/directory/add-group-member/"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Group Member Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"domain\": \"String\",\n            \"emailAddress\": \"String\",\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/directory/remove-group-member",
+							"path": [
+								"api",
+								"directory",
+								"remove-group-member"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/directory/remove-group-member/"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Threat Intelligence",
+			"item": [
+				{
+					"name": "Bring Your Own TI",
+					"item": [
+						{
+							"name": "Create Batch",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"hashList\": [\n                {\n                    \"hash\": \"String\",\n                    \"description\": \"String\",\n                    \"provider\": \"String\"\n                }\n            ],\n            \"operationType\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/byo-threat-intelligence/create-batch",
+									"path": [
+										"api",
+										"byo-threat-intelligence",
+										"create-batch"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/bring-your-own/create-batch/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Batches",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "/api/byo-threat-intelligence/get-batches",
+									"path": [
+										"api",
+										"byo-threat-intelligence",
+										"get-batches"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/bring-your-own/get-batches/"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Batch",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/byo-threat-intelligence/delete-batch",
+									"path": [
+										"api",
+										"byo-threat-intelligence",
+										"delete-batch"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/bring-your-own/delete-batch/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Quota",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "/api/byo-threat-intelligence/get-quota",
+									"path": [
+										"api",
+										"byo-threat-intelligence",
+										"get-quota"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/bring-your-own/get-quota/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Threat Intel Feed",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"end\": \"Date String\",\n            \"fileType\": \"String\",\n            \"compress\": false,\n            \"start\": \"Date String\",\n            \"token\": \"String\",\n            \"feedType\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/threat-intel/get-feed",
+							"path": [
+								"api",
+								"ttp",
+								"threat-intel",
+								"get-feed"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/get-feed/"
+					},
+					"response": []
+				},
+				{
+					"name": "Search File Hash",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"hashes\": [\n                \"string\"\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/remediation/search-hash",
+							"path": [
+								"api",
+								"ttp",
+								"remediation",
+								"search-hash"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/search-hash/"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Remediation Incidents",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"start\": \"2015-11-16T14:49:18+0000\",\n            \"searchBy\": [\n                {\n                    \"fieldName\": \"String\",\n                    \"value\": \"String\"\n                }\n            ],\n            \"end\": \"2015-11-16T14:49:18+0000\",\n            \"filterBy\": [\n                {\n                    \"fieldName\": \"String\",\n                    \"value\": \"String\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/remediation/find-incidents",
+							"path": [
+								"api",
+								"ttp",
+								"remediation",
+								"find-incidents"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/find-incidents/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Remediation Incident",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/remediation/get-incident",
+							"path": [
+								"api",
+								"ttp",
+								"remediation",
+								"get-incident"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/get-incident/"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Remedation Incident",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"end\": \"2015-11-16T14:49:18+0000\",\n            \"start\": \"2015-11-16T14:49:18+0000\",\n            \"reason\": \"String\",\n            \"searchBy\": \"String\",\n            \"hashOrMessageId\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/remediation/create",
+							"path": [
+								"api",
+								"ttp",
+								"remediation",
+								"create"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/threat-intel/create-incident/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Archive",
+			"item": [
+				{
+					"name": "Search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meta\": {},\n    \"data\": [\n        {\n            \"admin\": true,\n            \"query\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/archive/search",
+							"path": [
+								"api",
+								"archive",
+								"search"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/archive/search/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message Part",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"mailbox\": \"String\",\n            \"context\": \"String\",\n            \"id\": \"String\",\n            \"type\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/archive/get-message-part",
+							"path": [
+								"api",
+								"archive",
+								"get-message-part"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/archive/get-message-part/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meta\": {},\n    \"data\": [\n        {\n            \"view\": \"String\",\n            \"mailbox\": \"String\",\n            \"start\": \"Date String\",\n            \"end\": \"Date String\",\n            \"includeDelegates\": false,\n            \"includeAliases\": true\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/archive/get-message-list",
+							"path": [
+								"api",
+								"archive",
+								"get-message-list"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/archive/get-message-list/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message Detail",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/archive/get-message-detail",
+							"path": [
+								"api",
+								"archive",
+								"get-message-detail"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/archive/get-message-detail/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get File",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/archive/get-file",
+							"path": [
+								"api",
+								"archive",
+								"get-file"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/archive/get-file/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Directory Sync",
+			"item": [
+				{
+					"name": "Get Connection",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/directory/get-connection",
+							"path": [
+								"api",
+								"directory",
+								"get-connection"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/directory-sync/get-connection/"
+					},
+					"response": []
+				},
+				{
+					"name": "Execute Sync",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/directory/get-connection",
+							"path": [
+								"api",
+								"directory",
+								"get-connection"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/directory-sync/execute-sync/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Domain Management",
+			"item": [
+				{
+					"name": "Create Domain",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"domain\": \"String\",\n            \"inboundType\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/domain/create-domain",
+							"path": [
+								"api",
+								"domain",
+								"create-domain"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/domain/create-domain/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Verification Code",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"domain\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/domain/get-verification-code",
+							"path": [
+								"api",
+								"domain",
+								"get-verification-code"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/domain/get-verification-code/"
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Domain",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"domain\": \"String\",\n            \"inboundType\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/domain/verify-domain",
+							"path": [
+								"api",
+								"domain",
+								"verify-domain"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/domain/verify-domain/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Provision Status",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"domain\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/domain/get-provision-status",
+							"path": [
+								"api",
+								"domain",
+								"get-provision-status"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/domain/get-provision-status/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pending Domain",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/domain/get-pending-domain",
+							"path": [
+								"api",
+								"domain",
+								"get-pending-domain"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/domain/get-pending-domain/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Internal Domain",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/domain/get-internal-domain",
+							"path": [
+								"api",
+								"domain",
+								"get-internal-domain"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/domain/get-internal-domain/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pending Domain",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/domain/delete-pending-domain",
+							"path": [
+								"api",
+								"domain",
+								"delete-pending-domain"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/domain/delete-pending-domain/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email",
+			"item": [
+				{
+					"name": "File Upload",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var hash = \"enter your SHA265 file hash here\"",
+									"var fileSize = 0",
+									"",
+									"pm.request.headers.add({",
+									"    key: \"x-mc-arg\",",
+									"    value: \"{'data': [{'sha256': '\" + hash + \"', 'fileSize': \" + fileSize + \"}]}\"",
+									"})",
+									"",
+									"pm.request.headers.upsert({key: \"Content-Type\", value: \"application/octet-stream\"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": ""
+							}
+						},
+						"url": {
+							"raw": "/api/file/file-upload",
+							"path": [
+								"api",
+								"file",
+								"file-upload"
+							]
+						},
+						"description": "To use this call, populate the hash and fileSize variables under the Pre-request Script tab.\n\nDocumentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/email/file-upload/"
+					},
+					"response": []
+				},
+				{
+					"name": "Send Email",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"to\": [\n                {\n                    \"emailAddress\": \"String\",\n                    \"displayableName\": \"String\"\n                }\n            ],\n            \"from\": {\n                \"emailAddress\": \"String\",\n                \"displayableName\": \"String\"\n            },\n            \"attachments\": [\n                {\n                    \"size\": 1000,\n                    \"id\": \"String\",\n                    \"filename\": \"String\"\n                }\n            ],\n            \"htmlBody\": {\n                \"content\": \"String\",\n                \"id\": \"String\"\n            },\n            \"cc\": [\n                {\n                    \"emailAddress\": \"String\",\n                    \"displayableName\": \"String\"\n                }\n            ],\n            \"plainBody\": {\n                \"content\": \"String\",\n                \"id\": \"String\"\n            },\n            \"subject\": \"String\",\n            \"extraHeaders\": [\n                {\n                    \"name\": \"String\",\n                    \"value\": \"String\"\n                }\n            ],\n            \"bcc\": [\n                {\n                    \"emailAddress\": \"String\",\n                    \"displayableName\": \"String\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/email/send-email",
+							"path": [
+								"api",
+								"email",
+								"send-email"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/email/send-email/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logs & Statistics",
+			"item": [
+				{
+					"name": "Get TTP URL Logs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meta\": {},\n    \"data\": [\n        {\n            \"oldestFirst\": false,\n            \"from\": \"Date String\",\n            \"route\": \"all\",\n            \"to\": \"Date String\",\n            \"scanResult\": \"all\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/url/get-logs",
+							"path": [
+								"api",
+								"ttp",
+								"url",
+								"get-logs"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-ttp-url-logs/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get TTP Impersonation Logs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"meta\": {},\n        \"data\": [\n            {\n                \"oldestFirst\": false,\n                \"taggedMalicious\": true,\n                \"searchField\": \"String\",\n                \"identifiers\": [\n                    \"Array of Strings\"\n                ],\n                \"query\": \"String\",\n                \"from\": \"Date String\",\n                \"to\": \"Date String\",\n                \"actions\": [\n                    \"Array of Strings\"\n                ]\n            }\n        ]\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/impersonation/get-logs",
+							"path": [
+								"api",
+								"ttp",
+								"impersonation",
+								"get-logs"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-ttp-impersonation-protect-logs/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get TTP Attachment Logs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meta\": {},\n    \"data\": [\n        {\n            \"oldestFirst\": false,\n            \"from\": \"Date String\",\n            \"route\": \"all\",\n            \"to\": \"Date String\",\n            \"scanResult\": \"all\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/attachment/get-logs",
+							"path": [
+								"api",
+								"ttp",
+								"attachment",
+								"get-logs"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-attachment-protection-logs/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get DLP Logs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"data\": [\n            {\n                \"from\": \"2015-11-16T14:49:18+0000\",\n                \"oldestFirst\": false,\n                \"searchField\": \"String\",\n                \"actions\": [\n                    \"String\"\n                ],\n                \"to\": \"2015-11-16T14:49:18+0000\",\n                \"routes\": [\n                    \"String\"\n                ],\n                \"query\": \"String\"\n            }\n        ]\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/dlp/get-logs",
+							"path": [
+								"api",
+								"dlp",
+								"get-logs"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-dlp-logs/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get SIEM Logs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"type\": \"MTA\",\n            \"token\": \"String\",\n            \"fileFormat\": \"json\",\n            \"compress\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/audit/get-siem-logs",
+							"path": [
+								"api",
+								"audit",
+								"get-siem-logs"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-siem-logs/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Archive Message View Logs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meta\": {},\n    \"data\": [\n        {\n            \"start\": \"Date String\",\n            \"end\": \"Date String\",\n            \"query\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/archive/get-view-logs",
+							"path": [
+								"api",
+								"archive",
+								"get-view-logs"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-archive-message-view-logs/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Archive Search Logs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meta\": {},\n    \"data\": [\n        {\n            \"start\": \"Date String\",\n            \"end\": \"Date String\",\n            \"query\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/archive/get-search-logs",
+							"path": [
+								"api",
+								"archive",
+								"get-search-logs"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-archive-search-logs/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Audit Events",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"query\": \"String\",\n            \"endDateTime\": \"Date String\",\n            \"categories\": [\n                \"String\"\n            ],\n            \"startDateTime\": \"Date String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/audit/get-audit-events",
+							"path": [
+								"api",
+								"audit",
+								"get-audit-events"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-audit-events/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Journal Service",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/journaling/get-service",
+							"path": [
+								"api",
+								"journaling",
+								"get-service"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/logs-and-statistics/get-journal-service/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email Policy Management",
+			"item": [
+				{
+					"name": "Blocked Sender",
+					"item": [
+						{
+							"name": "Get Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "/api/policy/blockedsenders/get-policy",
+									"path": [
+										"api",
+										"policy",
+										"blockedsenders",
+										"get-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/blocked-sender-policy/get-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"option\": \"a string\",\n            \"policy\": {\n                \"bidirectional\": false,\n                \"comment\": \"a string\",\n                \"conditions\": {\n                    \"hostnames\": [\n                        \"a string\"\n                    ],\n                    \"sourceIPs\": [\n                        \"a string\"\n                    ],\n                    \"spfDomains\": [\n                        \"a string\"\n                    ]\n                },\n                \"description\": \"a string\",\n                \"from\": {\n                    \"attribute\": {\n                        \"id\": \"a string\",\n                        \"name\": \"a string\",\n                        \"value\": \"a string\"\n                    },\n                    \"emailAddress\": \"a string\",\n                    \"emailDomain\": \"a string\",\n                    \"groupId\": \"a string\",\n                    \"headerDisplayName\": \"a string\",\n                    \"type\": \"a string\"\n                },\n                \"fromDate\": \"a date string\",\n                \"fromEternal\": true,\n                \"fromPart\": \"a string\",\n                \"override\": false,\n                \"to\": {\n                    \"attribute\": {\n                        \"id\": \"a string\",\n                        \"name\": \"a string\",\n                        \"value\": \"a string\"\n                    },\n                    \"emailAddress\": \"a string\",\n                    \"emailDomain\": \"a string\",\n                    \"groupId\": \"a string\",\n                    \"headerDisplayName\": \"a string\",\n                    \"type\": \"a string\"\n                },\n                \"toDate\": \"a date string\",\n                \"toEternal\": true\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/blockedsenders/create-policy",
+									"path": [
+										"api",
+										"policy",
+										"blockedsenders",
+										"create-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/blocked-sender-policy/create-policy/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Address Alteration",
+					"item": [
+						{
+							"name": "Create Definition",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"folderId\": \"String\",\n            \"addressAlterations\": [\n                {\n                    \"originalAddress\": \"String\",\n                    \"newAddress\": \"String\",\n                    \"addressType\": \"String\",\n                    \"routing\": \"String\"\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/create-definition",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"create-definition"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/create-definition/"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"policy\": [\n                {\n                    \"fromEternal\": true,\n                    \"comment\": \"String\",\n                    \"enforced\": \"true\",\n                    \"description\": \"String\",\n                    \"fromDate\": \"Date String\",\n                    \"bidirectional\": false,\n                    \"toEternal\": true,\n                    \"fromPart\": \"String\",\n                    \"toDate\": \"Date String\",\n                    \"from\": {\n                        \"attribute\": {\n                            \"name\": \"String\",\n                            \"value\": \"String\",\n                            \"id\": \"String\"\n                        },\n                        \"type\": \"String\",\n                        \"emailAddress\": \"String\",\n                        \"groupId\": \"String\",\n                        \"emailDomain\": \"String\"\n                    },\n                    \"enabled\": \"false\",\n                    \"to\": {\n                        \"attribute\": {\n                            \"name\": \"String\",\n                            \"value\": \"String\",\n                            \"id\": \"String\"\n                        },\n                        \"type\": \"String\",\n                        \"emailAddress\": \"String\",\n                        \"groupId\": \"String\",\n                        \"emailDomain\": \"String\"\n                    },\n                    \"override\": false,\n                    \"conditions\": {\n                        \"sourceIPs\": [\n                            \"String\"\n                        ]\n                    }\n                }\n            ],\n            \"addressAlterationSetId\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/create-policy",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"create-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/create-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Set",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"description\": \"String\",\n            \"parentId\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/create-address-alteration-set",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"create-address-alteration-set"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/create-set/"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Definition",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/delete-definition",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"delete-definition"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/delete-definition/"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/delete-policy",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"delete-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/delete-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Definition",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"originalAddress\": \"String\",\n            \"newAddress\": \"String\",\n            \"folderId\": \"String\",\n            \"routing\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/get-definition",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"get-definition"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/get-definition/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/get-policy",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"get-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/get-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Set",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"depth\": 1,\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/get-address-alteration-set",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"get-address-alteration-set"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/get-set/"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"policy\": [\n                {\n                    \"fromEternal\": true,\n                    \"comment\": \"String\",\n                    \"enforced\": true,\n                    \"description\": \"String\",\n                    \"fromDate\": \"Date String\",\n                    \"bidirectional\": false,\n                    \"toEternal\": true,\n                    \"fromPart\": \"String\",\n                    \"toDate\": \"Date String\",\n                    \"from\": {\n                        \"attribute\": {\n                            \"name\": \"String\",\n                            \"value\": \"String\",\n                            \"id\": \"String\"\n                        },\n                        \"type\": \"String\",\n                        \"emailAddress\": \"String\",\n                        \"groupId\": \"String\",\n                        \"emailDomain\": \"String\"\n                    },\n                    \"enabled\": true,\n                    \"to\": {\n                        \"attribute\": {\n                            \"name\": \"String\",\n                            \"value\": \"String\",\n                            \"id\": \"String\"\n                        },\n                        \"type\": \"String\",\n                        \"emailAddress\": \"String\",\n                        \"groupId\": \"String\",\n                        \"emailDomain\": \"String\"\n                    },\n                    \"override\": false,\n                    \"conditions\": {\n                        \"sourceIPs\": [\n                            \"String\"\n                        ]\n                    }\n                }\n            ],\n            \"addressAlterationSetId\": \"String\",\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/address-alteration/update-policy",
+									"path": [
+										"api",
+										"policy",
+										"address-alteration",
+										"update-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/address-alteration/update-policy/"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Anti-Spoofing SPF Bypass",
+					"item": [
+						{
+							"name": "Create Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"policy\": {\n                \"fromEternal\": false,\n                \"comment\": \"String\",\n                \"enforced\": false,\n                \"description\": \"String\",\n                \"fromDate\": \"2015-11-16T14:49:18+0000\",\n                \"bidirectional\": false,\n                \"toEternal\": false,\n                \"fromPart\": \"String\",\n                \"toDate\": \"2015-11-16T14:49:18+0000\",\n                \"from\": {\n                    \"attribute\": {\n                        \"name\": \"String\",\n                        \"value\": \"String\",\n                        \"id\": \"String\"\n                    },\n                    \"headerDisplayName\": \"String\",\n                    \"emailAddress\": \"String\",\n                    \"emailDomain\": \"String\",\n                    \"type\": \"String\",\n                    \"groupId\": \"String\"\n                },\n                \"enabled\": false,\n                \"to\": {\n                    \"attribute\": {\n                        \"name\": \"String\",\n                        \"value\": \"String\",\n                        \"id\": \"String\"\n                    },\n                    \"headerDisplayName\": \"String\",\n                    \"emailAddress\": \"String\",\n                    \"emailDomain\": \"String\",\n                    \"type\": \"String\",\n                    \"groupId\": \"String\"\n                },\n                \"override\": false,\n                \"conditions\": {\n                    \"spfDomains\": [\n                        \"String\"\n                    ],\n                    \"hostnames\": [\n                        \"String\"\n                    ],\n                    \"sourceIPs\": [\n                        \"String\"\n                    ]\n                }\n            },\n            \"option\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/antispoofing-bypass/create-policy",
+									"path": [
+										"api",
+										"policy",
+										"antispoofing-bypass",
+										"create-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/antispoofing-spf-bypass/create-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/antispoofing-bypass/delete-policy",
+									"path": [
+										"api",
+										"policy",
+										"antispoofing-bypass",
+										"delete-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/antispoofing-spf-bypass/delete-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/antispoofing-bypass/get-policy",
+									"path": [
+										"api",
+										"policy",
+										"antispoofing-bypass",
+										"get-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/antispoofing-spf-bypass/get-policy/"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Policy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"policy\": {\n                \"fromEternal\": false,\n                \"comment\": \"String\",\n                \"enforced\": false,\n                \"description\": \"String\",\n                \"fromDate\": \"2015-11-16T14:49:18+0000\",\n                \"bidirectional\": false,\n                \"toEternal\": false,\n                \"fromPart\": \"String\",\n                \"toDate\": \"2015-11-16T14:49:18+0000\",\n                \"from\": {\n                    \"attribute\": {\n                        \"name\": \"String\",\n                        \"value\": \"String\",\n                        \"id\": \"String\"\n                    },\n                    \"headerDisplayName\": \"String\",\n                    \"emailAddress\": \"String\",\n                    \"emailDomain\": \"String\",\n                    \"type\": \"String\",\n                    \"groupId\": \"String\"\n                },\n                \"enabled\": false,\n                \"to\": {\n                    \"attribute\": {\n                        \"name\": \"String\",\n                        \"value\": \"String\",\n                        \"id\": \"String\"\n                    },\n                    \"headerDisplayName\": \"String\",\n                    \"emailAddress\": \"String\",\n                    \"emailDomain\": \"String\",\n                    \"type\": \"String\",\n                    \"groupId\": \"String\"\n                },\n                \"override\": false,\n                \"conditions\": {\n                    \"spfDomains\": [\n                        \"String\"\n                    ],\n                    \"hostnames\": [\n                        \"String\"\n                    ],\n                    \"sourceIPs\": [\n                        \"String\"\n                    ]\n                }\n            },\n            \"id\": \"String\",\n            \"option\": \"String\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/policy/antispoofing-bypass/update-policy",
+									"path": [
+										"api",
+										"policy",
+										"antispoofing-bypass",
+										"update-policy"
+									]
+								},
+								"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/policies/antispoofing-spf-bypass/update-policy/"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Managed Senders",
+			"item": [
+				{
+					"name": "Permit or Block Sender",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"action\": \"String\",\n            \"to\": \"String\",\n            \"sender\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/managedsender/permit-or-block-sender",
+							"path": [
+								"api",
+								"managedsender",
+								"permit-or-block-sender"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/managed-sender/permit-or-block-sender/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message Tracking",
+			"item": [
+				{
+					"name": "Search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"start\": \"Date String\",\n            \"end\": \"Date String\",\n            \"searchReason\": \"String\",\n            \"advancedTrackAndTraceOptions\": {\n                \"senderIP\": \"String\",\n                \"to\": \"String\",\n                \"from\": \"String\",\n                \"subject\": \"String\",\n                \"route\": \"String\"\n            },\n            \"messageId\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/message-finder/search",
+							"path": [
+								"api",
+								"message-finder",
+								"search"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/message-finder-formally-tracking/search/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message Info",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/message-finder/get-message-info",
+							"path": [
+								"api",
+								"message-finder",
+								"get-message-info"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/message-finder-formally-tracking/get-message-info/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message Queues",
+			"item": [
+				{
+					"name": "Get Message Hold List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"admin\": true,\n            \"start\": \"2015-11-16T14:49:18+0000\",\n            \"searchBy\": [\n                {\n                    \"fieldName\": \"String\",\n                    \"value\": \"String\"\n                }\n            ],\n            \"end\": \"2015-11-16T14:49:18+0000\",\n            \"filterBy\": [\n                {\n                    \"fieldName\": \"String\",\n                    \"value\": \"String\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/gateway/get-hold-message-list",
+							"path": [
+								"api",
+								"gateway",
+								"get-hold-message-list"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/message-queues/get-hold-message-list/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message Hold Summary List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/api/gateway/get-hold-summary-list",
+							"path": [
+								"api",
+								"gateway",
+								"get-hold-summary-list"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/message-queues/get-hold-summary-list/"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Processing Messages",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"end\": \"2015-11-16T14:49:18+0000\",\n            \"filterBy\": [\n                {\n                    \"fieldName\": \"String\",\n                    \"value\": \"String\"\n                }\n            ],\n            \"start\": \"2015-11-16T14:49:18+0000\",\n            \"sortOrder\": \"String\",\n            \"searchBy\": {\n                \"fieldName\": \"String\",\n                \"value\": \"String\"\n            },\n            \"type\": \"String\",\n            \"sortBy\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/gateway/find-processing-messages",
+							"path": [
+								"api",
+								"gateway",
+								"find-processing-messages"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/message-queues/find-processsing-messages/"
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Message",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"message\": \"String\",\n            \"ids\": [\n                \"String\"\n            ],\n            \"reasonType\": \"String\",\n            \"notify\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/gateway/hold-reject",
+							"path": [
+								"api",
+								"gateway",
+								"hold-reject"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/message-queues/reject-message/"
+					},
+					"response": []
+				},
+				{
+					"name": "Release Message",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/gateway/hold-release",
+							"path": [
+								"api",
+								"gateway",
+								"hold-release"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/message-queues/release-message/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Email Queues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"start\": \"2015-11-16T14:49:18+0000\",\n            \"end\": \"2015-11-16T14:49:18+0000\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/email/get-email-queues",
+							"path": [
+								"api",
+								"email",
+								"get-email-queues"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/message-queues/inbound-outbound-queues/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TTP URL Protection",
+			"item": [
+				{
+					"name": "Get Managed URL",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"domainOrUrl\": \"String\",\n            \"exactMatch\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/url/get-all-managed-urls",
+							"path": [
+								"api",
+								"ttp",
+								"url",
+								"get-all-managed-urls"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/targeted-threat-protection-url-protect/get-managed-url/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Managed URL",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/url/delete-managed-url",
+							"path": [
+								"api",
+								"ttp",
+								"url",
+								"delete-managed-url"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/targeted-threat-protection-url-protect/delete-managed-url/"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Managed URL",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"comment\": \"String\",\n            \"disableRewrite\": false,\n            \"url\": \"String\",\n            \"disableUserAwareness\": false,\n            \"disableLogClick\": false,\n            \"action\": \"String\",\n            \"matchType\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/url/create-managed-url",
+							"path": [
+								"api",
+								"ttp",
+								"url",
+								"create-managed-url"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/targeted-threat-protection-url-protect/create-managed-url/"
+					},
+					"response": []
+				},
+				{
+					"name": "Decode URL",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"url\": \"String\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/ttp/url/decode-url",
+							"path": [
+								"api",
+								"ttp",
+								"url",
+								"decode-url"
+							]
+						},
+						"description": "Documentation link: https://www.mimecast.com/tech-connect/documentation/endpoint-reference/targeted-threat-protection-url-protect/decode-url/"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var uri = pm.request.url.getPath();",
+					"var baseUrl = pm.environment.get(\"BaseURL\")",
+					"if (uri.includes(baseUrl)){",
+					"    uri = uri.replace(baseUrl, \"\");",
+					"}",
+					"else {",
+					"    pm.request.url = (baseUrl + uri)",
+					"}",
+					"",
+					"pm.request.headers.add({ key: \"x-mc-app-id\", value: pm.environment.get(\"ApplicationID\") });",
+					"",
+					"var uuid = require(\"uuid\");",
+					"var requestId = uuid.v4();",
+					"pm.request.headers.add({ key: \"x-mc-req-id\", value: requestId })",
+					"",
+					"var date = new Date().toUTCString();",
+					"pm.request.headers.add({ key: \"x-mc-date\", value: date });",
+					"",
+					"function Authorization() {",
+					"    var CryptoJS = require(\"crypto-js\");",
+					"    var concat = [date, requestId, uri, pm.environment.get(\"ApplicationKey\")].join(\":\");",
+					"    var encode = CryptoJS.enc.Base64.parse( pm.environment.get(\"SecretKey\") );",
+					"    var hmac = CryptoJS.enc.Base64.stringify( CryptoJS.HmacSHA1(concat, encode) );",
+					"    var auth = \"MC \" + pm.environment.get(\"AccessKey\") + \":\" + hmac;",
+					"    return auth;",
+					"}",
+					"pm.request.headers.add({ key: \"Authorization\", value: Authorization()})",
+					"",
+					"// Uncommenting this line can be useful for troubleshooting header values in the Postman console",
+					"//console.log(pm.request.headers)"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
